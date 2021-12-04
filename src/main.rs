@@ -3,6 +3,7 @@ use std::fs;
 mod day1;
 mod day2;
 mod day3;
+mod day4;
 
 fn main() {
     let input = fs::read_to_string("input/day1.txt").expect("Error while reading");
@@ -19,4 +20,8 @@ fn main() {
 
     day3::run_p1(input.clone());
     day3::run_p2(input.clone());
+
+    let input = fs::read_to_string("input/day4.txt").expect("Error while reading");
+
+    day4::run(input.clone());
 }
