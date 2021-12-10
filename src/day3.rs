@@ -25,7 +25,7 @@ pub(crate) fn run_p2(input: String) {
 
     for i in 0 .. v_o2[0].len() {
         let mut sum = 0;
-        
+
         for v in &v_o2 {
             sum += v.chars().nth(i).unwrap().to_digit(10).unwrap();
         }
@@ -41,7 +41,7 @@ pub(crate) fn run_p2(input: String) {
 
     for i in 0 .. v_co2[0].len() {
         let mut sum = 0;
-        
+
         for v in &v_co2 {
             sum += v.chars().nth(i).unwrap().to_digit(10).unwrap();
         }

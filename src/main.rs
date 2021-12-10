@@ -9,6 +9,7 @@ mod day6;
 mod day7;
 mod day8;
 mod day9;
+mod day10;
 
 fn main() {
     let input = fs::read_to_string("input/day1.txt").expect("Error while reading");
@@ -29,20 +30,23 @@ fn main() {
     let input = fs::read_to_string("input/day4.txt").expect("Error while reading");
 
     day4::run(input.clone());
-    
+
     // Lets change things a bit
     let input= include_str!("../input/day5.txt");
     day5::run(input);
-    
+
     let input= include_str!("../input/day6.txt");
     day6::run(input);
 
     let input= include_str!("../input/day7.txt");
     day7::run(input);
-    
+
     let input= include_str!("../input/day8.txt");
     day8::run(input);
-        
+
     let input= include_str!("../input/day9.txt");
     day9::run(input);
+
+    let input= include_str!("../input/day10.txt");
+    day10::run(input);
 }

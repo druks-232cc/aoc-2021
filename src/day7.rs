@@ -9,7 +9,7 @@ pub(crate) fn run(input: &str) -> Option<()> {
                                        .split(',')
                                        .map(|x| x.parse().unwrap())
                                        .collect();
-    
+
     crabs.sort();
 
     let median = *crabs.iter().nth(crabs.len()/2)?;
@@ -23,7 +23,7 @@ pub(crate) fn run(input: &str) -> Option<()> {
                     .round() as u32 - 1; // -1 needed ??? 474.586 rounded to 475
     fuel = 0;
 
-    crabs.iter().for_each(|x| 
+    crabs.iter().for_each(|x|
         fuel += (distance(mean, *x))*
                 (distance(mean, *x) + 1)
                 /2); // n*(n+1)/2

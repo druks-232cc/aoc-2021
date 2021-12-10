@@ -19,7 +19,7 @@ impl T for HeightMap {
                 {
                     let x = i as isize + s.0;
                     let y = j as isize + s.1;
-    
+
                     if x < 0 || x >= MAP_SIZE as isize || y < 0 || y >= MAP_SIZE as isize {
                         is_low && true
                     } else {

@@ -73,7 +73,7 @@ pub(crate) fn run(input: &str) -> Option<()> {
     let lines: Vec<(Point, Point)> = input.lines()
                                           .map(parse_points)
                                           .collect();
-                                            
+
     let mut m = Map::new();
 
     for l in &lines {

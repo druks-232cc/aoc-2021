@@ -68,16 +68,16 @@ fn numeric_output(x: [&str; 4], mapping: &HashMap<char,u32>) -> u32 {
 }
 
 pub(crate) fn run(input: &str) -> Option<()> {
-    let (signals, output): (Vec<[&str;10]>, Vec<[&str;4]>) = 
+    let (signals, output): (Vec<[&str;10]>, Vec<[&str;4]>) =
             input.lines()
                  .map(split_line)
                  .unzip();
 
     let mut count = 0;
 
-    output.iter().for_each(|x| 
+    output.iter().for_each(|x|
         x.iter().for_each(|x|
-            if x.len().ne(&5) && x.len().ne(&6) 
+            if x.len().ne(&5) && x.len().ne(&6)
             {count += 1} ));
 
     println!("Day8 p1 : {}", count);

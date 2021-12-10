@@ -29,7 +29,7 @@ pub(crate) fn run(input: &str) -> Option<()> {
 
     for _day in 80..256 {
         wait_for_a_day(&mut fishes_map);
-    }    
+    }
 
     println!("Day6 p2 : {}", fishes_map.values().sum::<u64>());
 
