@@ -10,6 +10,7 @@ mod day7;
 mod day8;
 mod day9;
 mod day10;
+mod day11;
 
 fn main() {
     let input = fs::read_to_string("input/day1.txt").expect("Error while reading");
@@ -49,4 +50,7 @@ fn main() {
 
     let input= include_str!("../input/day10.txt");
     day10::run(input);
+
+    let input= include_str!("../input/day11.txt");
+    day11::run(input);
 }
