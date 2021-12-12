@@ -67,7 +67,7 @@ fn numeric_output(x: [&str; 4], mapping: &HashMap<char,u32>) -> u32 {
     output
 }
 
-pub(crate) fn run(input: &str) -> Option<()> {
+fn run(input: &str) -> Option<()> {
     let (signals, output): (Vec<[&str;10]>, Vec<[&str;4]>) =
             input.lines()
                  .map(split_line)
@@ -91,4 +91,8 @@ pub(crate) fn run(input: &str) -> Option<()> {
     println!("Day8 p2 : {}", count);
 
     Some(())
+}
+
+fn main() {
+    run(include_str!("input.txt"));
 }

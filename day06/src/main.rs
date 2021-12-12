@@ -9,7 +9,7 @@ fn wait_for_a_day(fishes: &mut HashMap<u32, u64>) {
     *fishes.entry(8).or_insert(0) = to_die;
 }
 
-pub(crate) fn run(input: &str) -> Option<()> {
+fn run(input: &str) -> Option<()> {
     let fishes: Vec<u32> = input.lines().next()?
                                     .split(',')
                                     .map(|x| x.parse().unwrap())
@@ -34,4 +34,8 @@ pub(crate) fn run(input: &str) -> Option<()> {
     println!("Day6 p2 : {}", fishes_map.values().sum::<u64>());
 
     Some(())
+}
+
+fn main() {
+    run(include_str!("input.txt"));
 }

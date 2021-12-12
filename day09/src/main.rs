@@ -76,7 +76,7 @@ fn parse_line(l: &str) -> [u32; MAP_SIZE] {
      .collect::<Vec<u32>>().try_into().unwrap()
 }
 
-pub(crate) fn run(input: &str) -> Option<()> {
+fn run(input: &str) -> Option<()> {
     let mut m = Map::new();
 
     m.h = input.lines()
@@ -103,4 +103,8 @@ pub(crate) fn run(input: &str) -> Option<()> {
     println!("Day9 p2 : {}", bassin_sizes.pop()?*bassin_sizes.pop()?*bassin_sizes.pop()?);
 
     Some(())
+}
+
+fn main() {
+    run(include_str!("input.txt"));
 }

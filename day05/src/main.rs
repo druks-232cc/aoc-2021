@@ -69,7 +69,7 @@ fn parse_points(line: &str) -> (Point, Point) {
     )
 }
 
-pub(crate) fn run(input: &str) -> Option<()> {
+fn run(input: &str) -> Option<()> {
     let lines: Vec<(Point, Point)> = input.lines()
                                           .map(parse_points)
                                           .collect();
@@ -89,4 +89,8 @@ pub(crate) fn run(input: &str) -> Option<()> {
     println!("Day5 p2 : {}", m.dangers());
 
     Some(())
+}
+
+fn main() {
+    run(include_str!("input.txt"));
 }

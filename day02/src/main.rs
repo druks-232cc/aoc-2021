@@ -1,4 +1,4 @@
-pub(crate) fn run_p1(input: String) {
+fn run_p1(input: &str) {
     let values: Vec<(&str, &str)> = input.lines().map(|l| l.split_once(" ").unwrap()).collect();
 
     let mut depth: u32 = 0;
@@ -20,7 +20,7 @@ pub(crate) fn run_p1(input: String) {
     println!("Day2 p1 : {}", depth*pos);
 }
 
-pub(crate) fn run_p2(input: String) {
+fn run_p2(input: &str) {
     let values: Vec<(&str, &str)> = input.lines().map(|l| l.split_once(" ").unwrap()).collect();
 
     let mut depth: u32 = 0;
@@ -43,4 +43,9 @@ pub(crate) fn run_p2(input: String) {
     }
 
     println!("Day2 p2 : {}", depth*pos);
+}
+
+fn main() {
+    run_p1(include_str!("input.txt"));
+    run_p2(include_str!("input.txt"));
 }

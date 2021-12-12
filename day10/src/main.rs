@@ -39,7 +39,7 @@ fn parse_line(s: &str) -> (u64, bool) {
     (score, true)
 }
 
-pub(crate) fn run(input: &str) -> Option<()> {
+fn run(input: &str) -> Option<()> {
     let input: Vec<(u64,bool)> = input.lines()
         .map(parse_line)
         .collect();
@@ -63,4 +63,8 @@ pub(crate) fn run(input: &str) -> Option<()> {
     println!("Day10 p2 : {}", middle_score);
 
     Some(())
+}
+
+fn main() {
+    run(include_str!("input.txt"));
 }

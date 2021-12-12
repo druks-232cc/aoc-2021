@@ -90,7 +90,7 @@ fn parse_line(l: &str) -> [u32; MAP_SIZE] {
         .collect::<Vec<u32>>().try_into().unwrap()
 }
 
-pub(crate) fn run(input: &str) -> Option<()> {
+fn run(input: &str) -> Option<()> {
     let mut m = Map::new();
 
     m.o = input.lines()
@@ -107,4 +107,8 @@ pub(crate) fn run(input: &str) -> Option<()> {
     println!("Day11 p2 : {}", m.iterations);
 
     Some(())
+}
+
+fn main() {
+    run(include_str!("input.txt"));
 }

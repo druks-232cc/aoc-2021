@@ -1,4 +1,4 @@
-pub(crate) fn run_p1(input: String) {
+fn run_p1(input: &str) {
     let values: Vec<u32> = input.lines().map(|v| v.parse().unwrap()).collect();
 
     let mut prev = u32::MAX;
@@ -14,7 +14,7 @@ pub(crate) fn run_p1(input: String) {
     println!("Day1 p1 : {}", count);
 }
 
-pub(crate) fn run_p2(input: String) {
+fn run_p2(input: &str) {
     let values: Vec<u32> = input.lines().map(|v| v.parse().unwrap()).collect();
 
     let mut prev = u32::MAX;
@@ -30,4 +30,9 @@ pub(crate) fn run_p2(input: String) {
     }
 
     println!("Day1 p2 : {}", count);
+}
+
+fn main() {
+    run_p1(include_str!("input.txt"));
+    run_p2(include_str!("input.txt"));
 }

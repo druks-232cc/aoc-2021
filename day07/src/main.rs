@@ -4,7 +4,7 @@ fn distance(a: u32, b: u32) -> u32 {
     max(a, b) - min(a, b)
 }
 
-pub(crate) fn run(input: &str) -> Option<()> {
+fn run(input: &str) -> Option<()> {
     let mut crabs: Vec<u32> = input.lines().next()?
                                        .split(',')
                                        .map(|x| x.parse().unwrap())
@@ -31,4 +31,8 @@ pub(crate) fn run(input: &str) -> Option<()> {
     println!("Day7 p2 : {}", fuel);
 
     Some(())
+}
+
+fn main() {
+    run(include_str!("input.txt"));
 }

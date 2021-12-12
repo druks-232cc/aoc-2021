@@ -59,7 +59,7 @@ impl BingoCard {
     }
 }
 
-pub(crate) fn run(input: String) -> Option<()> {
+fn run(input: &str) -> Option<()> {
     let mut lines: Vec<&str> = input.lines().collect();
 
     // get first line with values
@@ -98,4 +98,8 @@ pub(crate) fn run(input: String) -> Option<()> {
     println!("Day4 p2 : {}", last_res);
 
     Some(())
+}
+
+fn main() {
+    run(include_str!("input.txt"));
 }
