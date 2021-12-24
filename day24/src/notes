@@ -1,0 +1,26 @@
+inp w
+mul x 0   //
+add x z   //
+mod x 26  // always 26
+div z 1   	// b 1: noop, 26:
+add x 12  // c
+eql x w   //  
+eql x 0   //  x := (w != (c + (z % 26))             
+mul y 0   	//
+add y 25	// always 25
+mul y x		//
+add y 1		//
+mul z y		// z := z/b * (1 + 25 * x)    => z := z/b * (1 + 25 * (w != (c + (z % 26))))
+mul y 0
+add y w
+add y 6	  // e
+mul y x
+add z y	  // z := z + (w + e) * (w != (c + (z % 26)))
+
+
+// z = z/a * (1 + 25 * (w != (b + (z % 26)))) + (w + c) * (w != (b + (z % 26)))
+
+
+b =  1 1 1 1 26 1 1 26 1 26 26 26 26 26 
+c = 12 11 10 10 -16 14 12 -4 15 -7 -8 -4 -15 -8 
+e = 6 12 5 10 7 0 4 12 14 13 10 11 9 9 
